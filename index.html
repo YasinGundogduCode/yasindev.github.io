@@ -7,36 +7,54 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            transition: background-color 0.3s, color 0.3s;
         }
         header {
             background: #007bff;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            margin-top: 10px;
         }
         section {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 900px;
+            margin: 40px auto;
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        section:hover {
+            transform: translateY(-10px);
         }
         h1, h2 {
             text-align: center;
+            margin-bottom: 20px;
         }
         .profil-resim {
             display: block;
-            margin: 0 auto;
+            margin: 20px auto;
             width: 150px;
             height: 150px;
             border-radius: 50%;
             border: 3px solid #007bff;
+            transition: transform 0.3s ease;
+        }
+        .profil-resim:hover {
+            transform: scale(1.1);
         }
         ul {
             list-style: none;
@@ -45,10 +63,14 @@
         ul li {
             background: #007bff;
             color: white;
-            padding: 10px;
-            margin: 5px 0;
+            padding: 12px;
+            margin: 8px 0;
             border-radius: 5px;
             text-align: center;
+            transition: background 0.3s ease;
+        }
+        ul li:hover {
+            background: #0056b3;
         }
         a {
             color: white;
@@ -56,10 +78,29 @@
         }
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background: #007bff;
             color: white;
-            margin-top: 20px;
+            margin-top: 30px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -87,10 +128,10 @@
     <section id="iletisim">
         <h2>İletişim</h2>
         <p>Bana ulaşmak için aşağıdaki kanalları kullanabilirsiniz:</p>
-        <ul>
-            <li><a href="mailto:yasin@example.com">Email: yasin@example.com</a></li>
-            <li><a href="#">LinkedIn: linkedin.com/in/yasingundogdu</a></li>
-            <li><a href="#">YouTube: youtube.com/c/YasinGundogdu</a></li>
+        <ul class="social-icons">
+            <li><a href="mailto:yasin@example.com">Email</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">YouTube</a></li>
         </ul>
     </section>
     
