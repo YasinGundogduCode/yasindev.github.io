@@ -24,6 +24,7 @@
             justify-content: center;
             gap: 20px;
             transition: background 0.3s ease;
+            z-index: 10; /* Navbar'ı üstte tutmak için */
         }
 
         .navbar a {
@@ -38,7 +39,6 @@
             justify-content: center;
             height: 100vh;
             position: relative;
-            transition: top 0.3s ease;
         }
 
         .profil-resim {
@@ -46,6 +46,11 @@
             height: 200px;
             border-radius: 50%;
             border: 5px solid white;
+            position: fixed;
+            top: 10px; /* Başlangıçta üstte olacak şekilde */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5; /* Resmi navbar'ın altında tutmak için */
         }
 
         section {
@@ -143,22 +148,10 @@
         <div class="social-icons">
             <a href="mailto:yasingundogdutr@outlook.com.tr"><img src="assets/icons/gmail.png" alt="E-Posta"></a>
             <a href="https://www.linkedin.com/in/yasingundogdu1/"><img src="assets/icons/linkedin.png" alt="LinkedIn"></a>
-            <a href="https://www.youtube.com/@codeCcraft"><img src="assets/icons/youtube.png" alt="youTube"></a>
+            <a href="https://www.youtube.com/@codeCcraft"><img src="assets/icons/youtube.png" alt="YouTube"></a>
         </div>
         <p>&copy; 2025 Yasin Gündoğdu | Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <script>
-        window.addEventListener('scroll', function() {
-            var hero = document.querySelector('.hero');
-            var profilResim = document.querySelector('.profil-resim');
-
-            if (window.scrollY > 150) {
-                hero.style.top = "calc(100vh - 250px)";  // Resmi sayfa kaydırıldıkça aşağıya kaydırır.
-            } else {
-                hero.style.top = "0";  // Başlangıçta resmi yukarıda tutar.
-            }
-        });
-    </script>
 </body>
 </html>
