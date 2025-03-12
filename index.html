@@ -61,9 +61,8 @@
             flex-wrap: wrap;
         }
         .proje-listesi a {
-             text-decoration: none;
+            text-decoration: none;
         }
-
 
         .proje-item {
             background: #007bff;
@@ -91,11 +90,16 @@
             font-size: 1.5rem;
         }
         .social-icons a {
-            transition: color 0.3s ease;
+            transition: transform 0.3s ease, color 0.3s ease; /* Renk ve büyüme animasyonları */
+        }
+        .social-icons a:hover {
+            transform: scale(1.2); /* İkonları büyütme */
+            color: #007bff; /* İkonlar üzerine gelindiğinde renk değişimi */
         }
         .social-icons a img {
             width: 30px;
             height: 30px;
+            transition: transform 0.3s ease; /* Görseller için animasyon */
         }
     </style>
 </head>
