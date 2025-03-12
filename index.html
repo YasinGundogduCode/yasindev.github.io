@@ -32,28 +32,15 @@
         }
         .hero {
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            text-align: center;
-            position: relative;
         }
         .profil-resim {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             border: 5px solid white;
-        }
-        .hero-title {
-            position: absolute;
-            top: 5%;
-            font-size: 1rem;
-            font-weight: 300;
-            color: #ffffff;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 6px 12px;
-            border-radius: 4px;
         }
         section {
             max-width: 900px;
@@ -67,6 +54,41 @@
         section:hover {
             transform: scale(1.05);
         }
+        .proje-listesi {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .proje-item {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            width: 250px;
+            transition: background 0.3s ease;
+        }
+        .proje-item:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #007bff;
+            color: white;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.5rem;
+        }
+        .social-icons a img {
+            width: 30px;
+            height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -78,21 +100,20 @@
     </div>
     
     <div class="hero">
-        <div class="hero-title">Yazılım Geliştirici | Arduino & Flutter Geliştirici</div>
         <img src="assets/img/yasin.jpg" alt="Yasin Gündoğdu" class="profil-resim">
     </div>
     
     <section id="hakkimda">
         <h2>Hakkımda</h2>
-        <p>Merhaba! Ben Yasin Gündoğdu. Mobil uygulama geliştirme, web sayfası tasarlama ve geliştirme, gömülü sistemler ve IoT projeleri üzerine çalışmalar yapan bir yazılım geliştiricisiyim. C#, Flutter ve Arduino teknolojileriyle yenilikçi projeler geliştirme konusunda tutkum lise zamanlarında yaptığım elektronik devre ve yazılım projeleriyle başladı. Benim için yazılım, problem çözmenin en etkili yolu. Kullanıcı dostu, performanslı ve ölçeklenebilir uygulamalar geliştirmek en büyük önceliğim. Sürekli öğrenmeye ve yeni teknolojileri keşfetmeye açık biriyim. Hedefim yenilikçi projelerle teknoloji dünyasına katkıda bulunmak, güçlü yazılım çözümleri üretmek ve birlikte çalıştığım ekiplerle başarıya ulaşmak.</p>
+        <p>Merhaba! Ben Yasin Gündoğdu. Arduino ve yazılım geliştirme konularında çalışmalar yapıyor, Flutter ile mobil uygulamalar tasarlıyorum. Aynı zamanda web tasarım alanında projeler geliştiriyorum.</p>
     </section>
     
     <section id="projeler">
         <h2>Projelerim</h2>
         <div class="proje-listesi">
-            <div class="proje-item" onclick="window.location.href='pages/proje1.html'">Arduino ile 2WD Akıllı Araç Kontrolü</div>
-            <div class="proje-item" onclick="window.location.href='pages/proje2.html'">Flutter ile Uzaktan Kumandalı Araç Uygulaması</div>
-            <div class="proje-item" onclick="window.location.href='pages/proje3.html'">Web Tasarım ve Frontend Geliştirme</div>
+            <div class="proje-item" onclick="window.location.href='proje1.html'">Arduino ile 2WD Akıllı Araç Kontrolü</div>
+            <div class="proje-item" onclick="window.location.href='proje2.html'">Flutter ile Uzaktan Kumandalı Araç Uygulaması</div>
+            <div class="proje-item" onclick="window.location.href='proje3.html'">Web Tasarım ve Frontend Geliştirme</div>
         </div>
     </section>
     
