@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yasin Gündoğdu | Portfolyo</title>
-    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -14,6 +13,7 @@
             color: #333;
             transition: background-color 0.3s, color 0.3s;
         }
+
         .navbar {
             position: fixed;
             top: 0;
@@ -25,23 +25,29 @@
             gap: 20px;
             transition: background 0.3s ease;
         }
+
         .navbar a {
             color: white;
             text-decoration: none;
             font-size: 1.2rem;
         }
+
         .hero {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            position: relative;
+            transition: top 0.3s ease;
         }
+
         .profil-resim {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             border: 5px solid white;
         }
+
         section {
             max-width: 900px;
             margin: 60px auto;
@@ -51,15 +57,18 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
+
         section:hover {
             transform: scale(1.05);
         }
+
         .proje-listesi {
             display: flex;
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
         }
+
         .proje-item {
             background: #007bff;
             color: white;
@@ -70,24 +79,29 @@
             width: 250px;
             transition: background 0.3s ease;
         }
+
         .proje-item:hover {
             background: #0056b3;
         }
+
         footer {
             text-align: center;
             padding: 15px;
             background: #007bff;
             color: white;
         }
+
         .social-icons {
             display: flex;
             justify-content: center;
             gap: 15px;
             font-size: 1.5rem;
         }
+
         .social-icons a {
             transition: color 0.3s ease;
         }
+
         .social-icons a img {
             width: 30px;
             height: 30px;
@@ -114,9 +128,9 @@
     <section id="projeler">
         <h2>Projelerim</h2>
         <div class="proje-listesi">
-            <div class="proje-item" onclick="window.location.href='proje1.html'">Arduino ile 2WD Akıllı Araç Kontrolü</div>
-            <div class="proje-item" onclick="window.location.href='proje2.html'">Flutter ile Uzaktan Kumandalı Araç Uygulaması</div>
-            <div class="proje-item" onclick="window.location.href='proje3.html'">Web Tasarım ve Frontend Geliştime</div>
+            <div class="proje-item" onclick="window.location.href='pages/proje1.html'">Arduino ile 2WD Akıllı Araç Kontrolü</div>
+            <div class="proje-item" onclick="window.location.href='pages/proje2.html'">Flutter ile Uzaktan Kumandalı Araç Uygulaması</div>
+            <div class="proje-item" onclick="window.location.href='pages/proje3.html'">Web Tasarım ve Frontend Geliştime</div>
         </div>
     </section>
     
@@ -133,5 +147,18 @@
         </div>
         <p>&copy; 2025 Yasin Gündoğdu | Tüm Hakları Saklıdır.</p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var hero = document.querySelector('.hero');
+            var profilResim = document.querySelector('.profil-resim');
+
+            if (window.scrollY > 150) {
+                hero.style.top = "calc(100vh - 250px)";  // Resmi sayfa kaydırıldıkça aşağıya kaydırır.
+            } else {
+                hero.style.top = "0";  // Başlangıçta resmi yukarıda tutar.
+            }
+        });
+    </script>
 </body>
 </html>
