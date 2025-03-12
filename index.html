@@ -10,27 +10,41 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom, #ffffff, #007bff);
             color: #333;
             transition: background-color 0.3s, color 0.3s;
         }
-        header {
-            background: #007bff;
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 123, 255, 0.8);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            transition: background 0.3s ease;
+        }
+        .navbar a {
             color: white;
-            text-align: center;
-            padding: 30px 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            font-size: 1.2rem;
         }
-        header h1 {
-            font-size: 2.5rem;
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
-        header p {
-            font-size: 1.1rem;
-            margin-top: 10px;
+        .profil-resim {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
         }
         section {
             max-width: 900px;
-            margin: 40px auto;
+            margin: 60px auto;
             background: white;
             padding: 20px;
             border-radius: 10px;
@@ -38,104 +52,82 @@
             transition: transform 0.3s ease;
         }
         section:hover {
-            transform: translateY(-10px);
+            transform: scale(1.05);
         }
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 20px;
+        .proje-listesi {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
-        .profil-resim {
-            display: block;
-            margin: 20px auto;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #007bff;
-            transition: transform 0.3s ease;
-        }
-        .profil-resim:hover {
-            transform: scale(1.1);
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
+        .proje-item {
             background: #007bff;
             color: white;
-            padding: 12px;
-            margin: 8px 0;
+            padding: 15px;
             border-radius: 5px;
             text-align: center;
+            cursor: pointer;
+            width: 250px;
             transition: background 0.3s ease;
         }
-        ul li:hover {
+        .proje-item:hover {
             background: #0056b3;
-        }
-        a {
-            color: white;
-            text-decoration: none;
         }
         footer {
             text-align: center;
             padding: 15px;
             background: #007bff;
             color: white;
-            margin-top: 30px;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
         }
-        .social-icons a {
-            margin: 0 10px;
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
             font-size: 1.5rem;
-            color: white;
-            transition: color 0.3s ease;
         }
-        .social-icons a:hover {
-            color: #ffcc00;
-        }
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            section {
-                padding: 15px;
-            }
+        .social-icons a img {
+            width: 30px;
+            height: 30px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Yasin Gündoğdu</h1>
-        <p>Geliştirici | Arduino & Flutter Geliştirici | Web Tasarımcısı</p>
-    </header>
+    <div class="navbar">
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#projeler">Projeler</a>
+        <a href="#referanslar">Referanslar</a>
+        <a href="#iletisim">İletişim</a>
+    </div>
+    
+    <div class="hero">
+        <img src="assets/img/yasin.jpg" alt="Yasin Gündoğdu" class="profil-resim">
+    </div>
     
     <section id="hakkimda">
         <h2>Hakkımda</h2>
         <p>Merhaba! Ben Yasin Gündoğdu. Arduino ve yazılım geliştirme konularında çalışmalar yapıyor, Flutter ile mobil uygulamalar tasarlıyorum. Aynı zamanda web tasarım alanında projeler geliştiriyorum.</p>
-        <img src="assets/img/yasin.jpg" alt="Yasin Gündoğdu" class="profil-resim">
     </section>
     
     <section id="projeler">
         <h2>Projelerim</h2>
-        <ul>
-            <li>Arduino ile 2WD Akıllı Araç Kontrolü</li>
-            <li>Flutter ile Uzaktan Kumandalı Araç Uygulaması</li>
-            <li>Web Tasarım ve Frontend Geliştirme</li>
-        </ul>
+        <div class="proje-listesi">
+            <div class="proje-item" onclick="window.location.href='proje1.html'">Arduino ile 2WD Akıllı Araç Kontrolü</div>
+            <div class="proje-item" onclick="window.location.href='proje2.html'">Flutter ile Uzaktan Kumandalı Araç Uygulaması</div>
+            <div class="proje-item" onclick="window.location.href='proje3.html'">Web Tasarım ve Frontend Geliştirme</div>
+        </div>
     </section>
     
-    <section id="iletisim">
-        <h2>İletişim</h2>
-        <p>Bana ulaşmak için aşağıdaki kanalları kullanabilirsiniz:</p>
-        <ul class="social-icons">
-            <li><a href="mailto:yasingundogdutr@outlook.com.tr">Email</a></li>
-            <li><a href="https://www.linkedin.com/in/yasingundogdu1/">LinkedIn</a></li>
-            <li><a href="https://www.youtube.com/@codeCcraft">YouTube</a></li>
-        </ul>
+    <section id="referanslar">
+        <h2>Referanslar</h2>
+        <p>Buraya referans bilgileri eklenebilir.</p>
     </section>
     
-    <footer>
+    <footer id="iletisim">
+        <div class="social-icons">
+            <a href="mailto:yasingundogdutr@outlook.com.tr"><img src="assets/icons/email.png" alt="E-Posta"></a>
+            <a href="https://www.linkedin.com/in/yasingundogdu1/"><img src="assets/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.youtube.com/@codeCcraft"><img src="assets/icons/youtube.png" alt="YouTube"></a>
+        </div>
         <p>&copy; 2025 Yasin Gündoğdu | Tüm Hakları Saklıdır.</p>
     </footer>
 </body>
